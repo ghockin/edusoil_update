@@ -22,11 +22,27 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
 /* HERO */
 .hero {
-  background: #efefef;
-  padding: 4rem 0;
+  position: relative;
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 80vh; /* adjust height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: #fff;
 }
-.hero-content h1 { font-size: 2.5rem; }
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4); /* dark overlay so text is readable */
+}
+
+.hero-content {
+  position: relative; /* needed to be above the overlay */
+  z-index: 1;
+}
 
 /* FOOTER */
 .main-footer {
