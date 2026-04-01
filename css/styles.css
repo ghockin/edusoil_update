@@ -4,8 +4,12 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
-/* HEADER */
 /* HEADER LAYOUT */
+.main-header {
+  position: relative;
+  z-index: 1000;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -33,20 +37,12 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
   font-weight: 500;
 }
 
-/* OPTIONAL: Donate button styling */
-.donate-btn {
-  background: #4CAF50;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
 
 /* MOBILE */
 .nav-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
+  position: relative;
+  z-index: 1100;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -85,7 +81,8 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.4); /* overlay for readability */
+  background-color: rgba(0,0,0,0.4);
+  pointer-events: none;
 }
 
 .hero-content {
