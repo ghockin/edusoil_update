@@ -40,6 +40,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 
 /* MOBILE */
 .nav-toggle {
+  display: none;
   position: relative;
   z-index: 1100;
   cursor: pointer;
@@ -58,8 +59,12 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   }
 
+  .nav.active {
+    display: flex;
+  }
+
   .nav-toggle {
-    display: block;
+    display: block; /* only visible on mobile */
   }
 }
 
